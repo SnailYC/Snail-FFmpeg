@@ -14,13 +14,13 @@
 
   - CPU:armv7a、arm64v8a、x86_64
 
-  - API：armv7a使用 Android 16，arm64v8a、x86_64 使用 Android 21
+  - API：armv7a 使用 Android 16，arm64v8a、x86_64 使用 Android 21
 - iOS:
   - CPU:armv7、arm64、i386、x86_64
   - 编译后的不同 CPU 架构的静态库合并
 - Mac:
   - CPU:x86_64
-  - 用于桌面开发测试，直接利用本机环境编译(由于当前项目中使用的 P2P 库只支持 x86_64，所以在 M1 MacOS 上，也默认交叉编译出 x86_64)
+  - 用于桌面开发测试，直接利用本机环境编译(由于当前我的项目中使用的其他库只支持 x86_64，所以在 M1 MacOS 上，也默认交叉编译出 x86_64)
 
 #### 编译准备：
 
@@ -65,7 +65,7 @@ chmod +x compile_ffmpeg_iOS.sh
 ```shell
 # 编译第三方库（fdk-aac、mp3lame、x264），纯净 FFmpeg 可不执行该步骤
 chmod +x compile_3rd_party_pc.sh
-./compile_3rd_party_x86_64.sh
+./compile_3rd_party_pc.sh
 
 # 编译 FFmpeg(FFmpeg 会判断是否有编译完成的第三方库并决定是否链接进来)
 chmod +x compile_ffmpeg_pc.sh
@@ -79,6 +79,7 @@ chmod +x compile_ffmpeg_pc.sh
 ##### 	cmake：		
 
 ```cmake
-add_subdirectory(ffmpeg)
+add_subdirectory(当前库目录)
+# MY_LIBS 改成你自己的变量，或直接把 FFMPEG_LIBS 添加到链接库列表中
 set(MY_LIBS ${MY_LIBS} ${FFMPEG_LIBS})
 ```
