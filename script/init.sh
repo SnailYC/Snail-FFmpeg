@@ -36,7 +36,7 @@ if [[ "${FDK_AAC_VERSION_NAME}" ]]; then
     then
         echo "下载 ${FDK_AAC_VERSION_NAME} 到 ${FDK_AAC_SOURCE}"
         mkdir -p ${FDK_AAC_SOURCE}
-        curl -# https://nchc.dl.sourceforge.net/project/opencore-amr/fdk-aac/${FDK_AAC_VERSION_NAME}.tar.gz | tar -xz \
+        curl -# https://versaweb.dl.sourceforge.net/project/opencore-amr/fdk-aac/${FDK_AAC_VERSION_NAME}.tar.gz | tar -xz \
         -C ${FDK_AAC_SOURCE} --strip-components 1 \
         || exit 1
 

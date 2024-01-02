@@ -32,7 +32,7 @@ export X264_TEMP=${TEMP_FOLDER}/${X264_VERSION_NAME}
 export X264_PREBUILT=${PREFIX_FOLDER}/${X264_VERSION_NAME}-prebuilt
 
 # https://sourceforge.net/projects/opencore-amr/files/fdk-aac/
-export FDK_AAC_VERSION_NAME="fdk-aac-2.0.2"
+export FDK_AAC_VERSION_NAME="fdk-aac-2.0.3"
 export FDK_AAC_SOURCE=${SOURCE_FOLDER}/${FDK_AAC_VERSION_NAME}
 export FDK_AAC_TEMP=${TEMP_FOLDER}/${FDK_AAC_VERSION_NAME}
 export FDK_AAC_PREBUILT=${PREFIX_FOLDER}/${FDK_AAC_VERSION_NAME}-prebuilt
