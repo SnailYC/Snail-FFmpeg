@@ -27,6 +27,9 @@
 1. 将 FF_ANDROID_NDK 环境变量添加到 ~/.bash_profile 中
 
    > 如：export FF_ANDROID_NDK=/Users/snailyc/Library/Android/sdk/ndk/22.1.7171670
+   > 
+   > _记得 source ~/.bash_profile_
+
 2. 在 config/config.sh 中设置编译过程中的目录以及编译库的版本名称，第三方库不指定版本名称则认为是不编译
 3. 初始化(这一步主要是下载源码)：
 
